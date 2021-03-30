@@ -1,0 +1,238 @@
+What is an API?
+API stands for application programming interface. This is a concept in software technology that essentially refers to how multiple applications can interact with and obtain data from one another. APIs operate on an agreement of inputs and outputs.
+
+RestFul
+When can I go with REST API, When can I go with SOAP? Ans -  https://www.guru99.com/comparison-between-web-services.html
+Do you see any positive part of using SOAP web service with XML? 
+Interview Questions:
+	https://www.edureka.co/blog/what-is-microservices/?utm_source=youtube&utm_medium=crosspost&utm_campaign=social-media-edureka-march-samarpit
+Important 
+	https://codingnconcepts.com/top-microservices-interview-questions/
+
+SOAP and RestFul Difference? https://www.guru99.com/comparison-between-web-services.html
+	SOAP – Simple Object Access Protocol
+	REST -REpresentational State Transfer
+Http Methods? Which HTTP method is not idempotent?
+	The PUT and DELETE methods are defined to be idempotent That is, calling the same PUT request multiple times will always produce the same result..
+	GET, HEAD, PUT and DELETE 
+
+GET – Used to retrieve data.
+PUT – used to update/Replace/modify data.
+PATCH – used to partial Update/Modify
+POST – used to add new record
+DELETE – used to delete record
+HEAD - The HEAD method is functionally similar to GET, except that the server replies with a response line and headers, but no entity-body. 
+OPTIONS - The OPTIONS method is used by the client to find out the HTTP methods and other options supported by a web server. 
+TRACE - The TRACE method is used to "echo the contents of an HTTP Request" back to the requester which can be used for debugging purpose at the time of development. 
+CONNECT - The CONNECT method is used by the client to establish a network connection to a web server over HTTP. 
+
+What is PathParam  and QueryParam?  https://medium.com/1developer/spring-requestparam-vs-queryparam-vs-pathvariable-vs-pathparam-7c5655e541ad
+	@QueryParam is used to access key/value pairs in the query string of the URL (the part after the ?). 
+	For example in the url http://example.com?q=searchterm, you can use @QueryParam("q") to get the value of q.
+
+	@PathParam is used to match a part of the URL as a parameter. 
+	For example in an url of the form http://example.com/books/{bookid}, you can use @PathParam("bookid") to get the id of a book.
+	In jersey(JAX-RS) its PathParam  and QueryParam
+	In SpringRest its  PathVariable and  RequestParam
+	
+Webservice is Stateful or Stateless – REST, SOAP?	https://www.xenonstack.com/insights/stateful-and-stateless-applications/
+	A Stateful application remembers specific details of a user like profile, preferences, and user actions. This information is considered as the ‘Status’ of a system.
+	For example, your shopping cart while using any website in Cloud. Each time you select an item and add it in your cart, you add it with the items added previously and eventually, you navigate to the checkout page.
+
+	A Stateless application or process is something that does not save or reference information about previous operations. Every time it carries each operation from the scratch just like the first time and provides functionality to use print, CDN (Content Delivery Network) or the Web Servers in order to process every short-term request.
+	
+	There is a load balancer,  First request to log in go to server one and second request might go to server 2; now, since only the server has enabled login to be true, the user won’t be able to logic when LB sends him to 2nd server,	So it’s not possible to horizontally scale Stateful applications.
+	
+	Stateless Architecture is entirely different and better than Stateful. Stateless applications scale very poorly.
+	The load balancer sends traffic to any server & request serviced well since client sending token or other needful info with each request. JSON Web Token (JWT) widely used to create Stateless applications.
+	
+	Stateless Applications Tools
+		The best Stateless application tools are below:
+
+		Modern languages such as Python, Golang.
+		For deployment purpose – Containers and Orchestration such as Docker and Kubernetes.
+		Other Services Discovery – Kube proxy service, Etcd.
+		API Gateway – To connect to various services from outside.
+		For Service Mesh around all Stateless applications: LinkerD / Istio
+	
+What is Monolithic 
+	Means composed all in one piece. A monolithic application is one which is self-contained. All components of the application must be present in order for the code to work.
+
+Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. 
+-----------------------------Micro-services--------------------------
+
+Diff Rest service and Micro-services - 
+	Micro-service is a architectural style for web application development.
+	REST API is a framework through which developer can intact with application.
+	
+	Micro-service is more about architecture.
+	Rest focuses on how to expose the MS
+	
+Microservices architecture ? What is the need of Micro-services?
+	MSA is an architectural style where the entire application is divided and designed as loosely-coupled, independent services modelled around a business domain.
+	The important point at this stage is that each independent service has a business boundary which can be independently developed, tested, deployed, monitored, and scaled. These can be even developed in different programming languages.
+
+
+What do you understand by microservices?
+	When you break an entire application architecture into smaller services where
+	Each service is independently serves a functionality of that application
+	Each service has their own development, build process, deployment and testing cycle
+	This kind of setup is known as microservices based architecture.
+
+Microservices architecture for the following benefits:
+		Independently develop and deploy services
+		Speed and agility
+		Better code quality
+		Code created/organized around business functionality
+		Increased productivity
+		Easier to scale
+		Freedom (in a way) to choose the implementation technology/language
+
+Challenges with Micro-services?
+	Microservices use HTTP as the protocol for synchronous communication gives hackers more opportunities for system penetration.
+		User AWS API Gateway (single entry point for all requests) for securing microservices.
+	Monitoring and debugging microservices running in a multi-node environment.	
+		Distributed tracing solutions from Twittter (ZipKin) and Google (Dapper), Opentracing developed by Uber, Apple, Yelp is rapidly becoming the de facto standard for microservices tracing. 
+		AWS X-ray for tracing MC
+
+How you identify that the service implemented is Micro-services 
+Diff of SOA and Micro-services
+	SOA - Service Oriented Architecture 
+	MC 
+New feature of Micro-services
+Why spring boot is preferred for building/design Micro-services?
+	Spring Boot enables building production-ready applications quickly and provides non-functional features:
+	Embedded servers which are easy to deploy with the containers.
+	It helps in monitoring the multiples components.
+	It helps in configuring the components externally.
+
+what things you should consider while developing API Micro-services
+	To help you get started, ask the following questions to yourself.
+
+	Do you have a complete understanding of what microservices are and how they could influence your development operations?
+	Is your business mature enough to adopt microservices?
+	How strong is your practice of application infrastructure?
+	Do you have a tried and tested agile or DevOps practice?
+	Is your data management team skilled enough to support the incorporation? If it’s a no for this one, they will only slow down what is supposed to be a swift process.
+	Is your product at the fulcrum of your business model?
+	What are your goals and vision on scaling up? The architecture is designed for scalability and is ideal only if you have a sound plan of expanding both your product/service and your market.
+	Is your business model tested and proven?
+	
+	When to Use Microservices
+		When you want your monolithic application to accommodate scalability, agility, manageability and delivery speed
+		When you have to rewrite legacy applications in today’s programming languages or tech stacks to keep up with modern-day business requirements and solutions
+		When you have standalone business applications or modules that have to be reused across diverse channels—some good examples would be login services, search options, authentication facilities and more
+		If you’re building a highly agile application (product or service) that demands swift speed of delivery, innovation and more
+
+
+what is SAGA pattern , event sourcing , CQRS in Micro-services
+
+12 Factors of Micro-services designing 
+	I. Codebase
+		One codebase tracked in revision control, many deploys
+	II. Dependencies
+		Explicitly declare and isolate dependencies
+	III. Config
+		Store config in the environment
+	IV. Backing services
+		Treat backing services as attached resources
+	V. Build, release, run
+		Strictly separate build and run stages
+	VI. Processe3		Execute the app as one or more stateless processes
+	VII. Port binding
+		Export services via port binding
+	VIII. Concurrency
+		Scale out via the process model
+	IX. Disposability
+		Maximize robustness with fast startup and graceful shutdown
+	X. Dev/prod parity
+		Keep development, staging, and production as similar as possible
+	XI. Logs
+		Treat logs as event streams
+	XII. Admin processes
+
+Run admin/management tasks as one-off processes
+How load balancing works
+How blue green deployment works in Micro-services
+If 100 service are there do we need to maintain 100 ports for all 100 service - https://dzone.com/articles/microservices-communication-zuul-api-gateway-1
+for diff countries do we need to maintain diff Micro-services or only one service will work ? which approach is better?
+Can we scale Micro-services at runtime? Any issue in that?
+How to avoid wrong request to reach upto controller? is there any way to reject it before reaching controller?
+what is routing in Micro-services 
+what is use of api gateway
+how Micro-services communicate with each other 
+what is api lifecycle 
+How to identify from 1000 Micro-services which service is down?
+what is the use of docker and kubernate 
+Deployment strategies for Micro-services
+if one instance serving an request and it goes down and if we route that request to other instance, how previous request will behave?
+
+Authentication and Authorization methods?
+	Authentication is the process of verifying who a user is, 
+	Authorization is the process of verifying what they have access to. (Privileges and Authorities) or to check role  
+	Spring Cloud security and the OAuth2 (Open Authentication) standard to secure your Spring-based services.
+		OAuth2 - OAuth2 is a token-based authentication and authorization third-party framework. 
+				 If the user successfully authenticates, they will be presented a token that must be sent with every request. The token can then be validated back to the authentication service. 
+		Spring Boot and Spring Cloud each provide an out-of-the-box implementation of an OAuth2 service
+	https://www.marcobehler.com/guides/spring-security
+	
+	Authentication - 
+		Http Authentication 
+		Forms base (Login form)
+		Certificate
+		Token 
+	Authorization - 
+
+Http Response Codes ?
+	500 - Internal Server Error server error	
+	400 - Bad request , fields missing or in wrong format
+	401 - Authorisation 
+	403 - Authentication 
+	404 - URI not found 
+	405 - Method not allowed 
+	406 - Not acceptable 
+	415 - Ubsupported media type 
+	503 - Service unavailable 
+	504 - Backend timeout
+	200 - OK 
+		If a request succeeds, Usually for GET, PUT, DELETE
+	201 - CREATED
+		Creating new objects like messages or tasks will usually return a "201 Created" status. Usually for POST
+	304 - Not Modified
+		This means the request is coming from cache. It was first loaded with a 200 success. Since your last call, no data has changed so your request comes from cache.
+REST web services: synchronous or asynchrous?	
+	"Synchronous" or "Asynchronous" is the behaviour of the client that is requesting the resource. It has nothing to do with REST webservice, its structure, or the supporting server.
+
+	Synchronous behaviour:
+		Client constructs an HTTP structure, sends over the socket connection.
+		Waits for the response HTTP.
+	Asychronous behaviour:
+		Client constructs HTTP structure, sends the request, and moves on.
+		There's another thread that is waiting on the socket for the response. Once response arrives, the original sender is notified (usually, using a callback like structure).
+
+------------------------------------Cloud Computing ------------------------------
+Vertical Scalability vs Horizontal Scalability - https://www.youtube.com/watch?v=YE1ytf15WOQ
+	In terms of cloud computing or general aspects of its Scaling is a property or attribute where our system has the ability to meet the requirement by changing its scale and size.
+
+Proxy and Reverse Proxy? Please find the diagram in repo 
+	Proxy - Multiple client machine connected using proxy to single server 
+		Benefits -
+			caching
+			Blocking Unwanted Sites
+	Reverse Proxy - Client is connected with multiple server using reverse proxy.
+		Benefits - 
+			load balancing 
+			caching logging 
+			isolating internal traffic 
+			Canary Deployment
+----------------------------------------Security----------------------------------q			
+Spring Boot Security Interview Questions: https://www.techgeeknext.com/spring-boot-security/jwt-interview-questions	
+	Spring Security Interview Questions
+	OAuth2.0 Interview Questions
+	JWT Interview Questions
+	SAML Interview Questions
+	Basic Authentication
+	API Keys
+	Security Assessment Markup Language (SAML)
+	OAuth 2
+	JSON Web Token (JWT)

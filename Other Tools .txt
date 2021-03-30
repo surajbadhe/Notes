@@ -1,0 +1,5 @@
+Splunk 	
+	Splunk collect, index and analysis the data from different sources. the data can be presented as graph, reports, alerts etc.
+	Its a product for capturing the logs from PAAS , primarily PCF(Pivotal cloud Foundry) which does nto allow logs to be written on attached storage.
+	Used for data collection search and analysis.
+	

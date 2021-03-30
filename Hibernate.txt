@@ -1,0 +1,39 @@
+---------------------Hibernate-------------------
+Save , persist , Update , Merge
+https://www.baeldung.com/hibernate-save-persist-update-merge-saveorupdate
+Why to use Hibernate 
+
+Advantage of using hibernate ?
+
+Difference between Hibernate and JSP?
+
+Exception handling in hibernate?
+
+What is the Java Persistence API?
+
+
+	
+How Hibernate is loosely coupled.
+1. Many to Many relationship
+
+2. Hibernate Cache Design pattern: design Solar system design a parking lot
+
+What do you think is hibernate?
+What is your understanding of hibernate Porxy?
+can you explain hibernate callback interface?
+What are your  thoughts in hibernate file mapping?
+Diff types of relationship avaibale in hibernate?
+Explain lazy loading in hibernate ?
+What are the benefits of named SQL query?
+Explain hibernate validator framework ?
+Explain diff states of an entity bean?
+Design pattern Puzzle:
+
+1.building the wall with 2 kind of bricks ,short one is 1x1 size long one is 1x2 size the short need to build next the long given the length of the wall specify how many ways to build it
+
+2. We have a list of candidates name, your mission is finding candidates voted more than half of the list of candidates.
+https://howtodoinjava.com/hibernate/hibernate-save-and-saveorupdate/
+
+
+
+

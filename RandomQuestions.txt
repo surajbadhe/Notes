@@ -1,0 +1,209 @@
+1. What is the difference between Collection API and Streams API? What is the value added by streams actually?
+	Collections and Streams, both are conceptually two different things which are used for two different purposes. If the collections are used to store the data then the streams are used to perform operations on that data. In this article, we will discuss the difference between collections and streams in Java.
+	Collections are used to store and group the data in a particular data structure like List, Set or Map.  
+	Streams are used to perform complex data processing operations like filtering, matching, mapping etc on stored data such as arrays, collections or I/O resources. 
+	Collections are mainly about data.
+	Streams are mainly about operations on data.
+	Collections																	Streams
+		Collections are mainly used to store and group the data.					Streams are mainly used to perform operations on data.
+		You can add or remove elements from collections.							You can’t add or remove elements from streams.
+		Collections have to be iterated externally.									Streams are internally iterated.
+		Collections can be traversed multiple times.								Streams are traversable only once.
+		Collections are eagerly constructed.										Streams are lazily constructed.
+		Ex : List, Set, Map…														Ex : filtering, mapping, matching…
+3. What is the use of generics? How generics help developer? - https://www.javatpoint.com/generics-in-java
+4. Which case do you use ? (Question Mark) in generics? 
+5. Thread life cycle? 
+6. What is Concurrent Hashmap? Compare it with Hashmap.  
+7. Can we add a new entry to Hashmap while iterating? No
+8. I have a set of elements which are not duplicates. Which collection you would use to store these objects?
+9. Can you explain the hashing technique to make Java store all specific objects in one bucket? 
+10. When you say multi threading. Is it of any use in single core system? 
+	Yes, you can have multiple threads on a single-core computer.
+	The difference between single processor and multi-processor systems is that a multi-processor system can indeed do more than one thing at a time. It can do N things at a time, where N is the number of processor cores. A single-processor core can only do one thing at a time. As WhozCraig said in his comment, it's the difference between actual and perceived concurrency.
+11. Do you have any idea of Servlet filter? Explain the purpose and where would you use? 
+	A filter is an object that is invoked at the preprocessing and postprocessing of a request.
+	It is mainly used to perform filtering tasks such as conversion, logging, compression, encryption and decryption, input validation etc.
+12. Can I modify the request headers in the filter? Yes
+13. What is the design pattern used in Spring IOC? 
+	https://blog.eduonix.com/java-programming-2/learn-design-patterns-used-spring-framework/
+14. Do you have deep knowledge of design patterns? 
+15. Do you know what design pattern is used in java IO stream?
+	I guess they wanted to hear about the Decorator pattern which can be found in the various Streams, Readers and Writers.
+	Other patterns (small selection):
+	Observer pattern in the swing libraries
+	Factory pattern in the javax.xml.parsers packages
+	Iterator pattern, used in collections
+16. When can I go with REST API, When can I go with SOAP?
+17. Do you see any positive part of using SOAP web service with XML? 
+18. What are the different scopes of spring bean?
+
+Differences Between Interface And Abstract Class After Java 8 :
+	interface anyInterface
+	{
+		int i = 10;            //By default, interface fields are public, static and final
+		void abstractMethod();          //Interface can have abstract method
+		default void defaultMethod()
+		{
+			System.out.println("Interface can have default method");
+		}
+		static void staticMethod() 
+		{
+			System.out.println("Interface can have static method");
+		}
+		//No constructors in an interface
+		//No non-static and non-final variables in an interface
+		//No private fields and methods in an interface
+		//No protected fields and methods in an interface
+		//No final methods in an interface
+	}
+	abstract class anyAbstractClass
+	{
+		private int a;          //Abstract class can have private field
+		protected int b;        //Abstract class can have protected field
+		public int c;           //Abstract class can have public field
+		static int d;           //Abstract class can have static field
+		final int e = 10;       //Abstract class can have final field
+		int f;                  //Abstract class can have non-static and non-final field
+		public anyAbstractClass() 
+		{
+			System.out.println("Abstract class can have constructors");
+		}
+		abstract void abstractmethod();    //Abstract class can have abstract method
+		private static void staticMethod() 
+		{
+			System.out.println("Abstract class can have private and static method");
+		}
+		public void nonStaticMethod()
+		{
+			System.out.println("Abstract class can have public and non-static method");
+		}
+		protected void protectedMethod() 
+		{
+			System.out.println("Abstract class can have protected method");
+		}
+		final void finalMethod()
+		{
+			System.out.println("Abstract class can have final method");
+		}
+		//No default method in an abstract class
+	}
+	Interview Questions
+
+Shift a linked list n times  
+
+Check if two strings are anagrams  
+
+Find number of all possible permutations of a string
+ABA -> AAB/BAA/ABA  
+
+Find out if there is a loop inside a linked list  
+
+-------------------------------------09/03/2021------------------------------------
+
+Difference between extends Thread and implements Runnable in Java
+Difference between PATH and Classpath in Java?
+What is load factor of HashMap means?
+Difference between notify and notifyAll in Java?
+Difference between wait and sleep in Java?
+Which two methods you will override for an Object to be used as Key in HashMap?
+Difference between Hashtable and ConcurrentHashMap in Java?
+Difference between ArrayList and Vector in Java?
+Difference between List and Set in Java?
+Difference between Hashtable and HashMap in Java?
+Can we override private method in Java?
+Difference between Serializable and Externalizable in Java?
+Difference between transient and volatile variable in Java?
+When to use transient variable in Java?
+When to use volatile variable in Java?
+How do you create thread-safe Singleton in Java?
+What is double checked locking in Singleton?
+Difference between ArrayList and HashSet in Java?
+Write a Java program to check if a number is Even or Odd?
+What is ClassLoader in Java?
+How Java achieves platform independence?
+What is difference between StringBuffer and StringBuilder in Java ?
+What is the difference between factory and abstract factory pattern?
+What do you understand by thread-safety ? Why is it required ? And finally, how to achieve thread-safety in Java Applications ?
+What will happen if you call return statement or System.exit on try or catch block ? will finally block execute?
+How do you ensure that N thread can access N resources without deadlock
+Can you access non static variable in static context
+Thread safe
+
+Concurrent hash map
+
+Diff btw get and load in hibernate 
+Diff btw session and session factory
+Spring session
+Hibernate caching
+Many to one /one to many realtioship in hibernate entity
+Criteria queries of hibernate
+Difference between application context and bean factory
+Spring rest
+JavaScript promise
+Event bubbling
+How to Solve JavaScript .js conflicts
+Project/module estimations
+Array blocking/array list blocking
+Why string is immutable
+Same class name in package
+Coposition and aggrgation
+Difference between component and service annotation
+Serialization after adding property
+Desiralization after deleting property
+byte a=128,b=127;byte c= a/b;
+When to use comparator and comparable
+I want to sort based on age which one will you prefer
+What will happen when you trying to use session
+Steps for hibernate configuration
+@Autowire annotation spring
+@Qualifier annotation in spring
+Volatile
+Diffwrent Hashmap and coccurenthashmap
+Lock interface.
+Cyclic dependency
+annotation in spring configuration
+Been lifecycle
+Call back methods in spring
+Object state in hibernate
+Design patterns
+Threads in synchronization
+Difference between interface and abstract class
+Load factor in hashmap
+Cyclic/circular dependency in spring
+Dirty read /phantom read/un committed ready in hibernate
+Explain HAS-A-Relationship and IS-A-Relationship
+What is Loose Coupling and Tight coupling?
+Exaplain Interfaces and Abstract class in Details ?
+Can we extend two class at a time? – Ans is NO
+Why Marker interface does not have any methods.?
+Then he moved to Multi-Threading asked me
+what is class level lock and Object level lock?
+why wait() , notify() , and notifyAll() method present in object class not in Thread class.?
+what is the use of join() method?
+What is Synchronization?
+What is DeadLock with an example?
+How many interfaces in Collection?
+He asked me about hashmap internal working with the hash collision technique also? I answered with linear probing and double hashing.
+What is the complexity of the ArrayList and LinkedList?
+How many methods present in the Collections class?
+How to print Duplicates Strings in a sentence, my answer- My Approach through HashSet to print duplicates.
+He asked one Array-based Question
+Exception Handling
+what is Throwable?
+How many types of Exceptions?
+Checked and Unchecked Exceptions?
+Write a Program for Custom exception?
+Types of garbage Collectors?
+Daemon Thread?
+Round 3: This round was technical round for Spring-boot and hibernate.
+What are the features of Spring boot?
+He asked me almost all the annotations in Spring-boot.
+What is ORM?
+What is a Dependency injection?
+How to get loose coupling? By using DI
+Some Question from Spring Data JPA
+Circular Dependency?
+What is the use of @Entity annotation?
+What is Micro-services?
+What is load-balancing?

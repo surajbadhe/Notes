@@ -1,0 +1,1128 @@
+https://www.javamadesoeasy.com/
+Tricky Programs : https://www.youtube.com/playlist?list=PLcow8_btriE0fB-UarDDFauM4mS5nsc1F
+				  https://www.programiz.com/java-programming/examples/alphabet#:~:text=In%20Java%2C%20the%20char%20variable,z%20is%20stored%20as%20122.
+http://www.javainterview.in/p/design-patterns-interview-questions.html
+
+"Java is always pass by value not pass by reference"
+--Core Java / J2EE 
+1.6 / 1.7 / 1.8 Java feature
+
+Java 5 Features 
+	- For-each loop (Java 5)
+	- Generics: provides compile-time (static) type safety for collections and eliminates the need for most typecasts (type conversion).
+	- Annotations
+	- Static imports concurrency utilities in package java.util.concurrent.
+	- Scanner class for parsing data from various input streams and buffers.
+	- StringBuilder class (in java.lang package)
+	- Autoboxing/unboxing: automatic conversions between primitive types (such as int) and primitive wrapper classes (such as integer).
+	
+Java 6 Features 	
+	Scripting Language Support
+	Performance improvements
+	JAX-WS
+	JDBC 4.0
+	Java Compiler API
+	JAXB 2.0 and StAX parser
+	Pluggable annotations
+	New GC algorithms	
+
+Java 7 Features 
+	Strings in switch Statement
+	Multi-catch similar exceptions
+	Automatic Resource Closing
+	Underscore in Numerical Literals
+	Binary Literals with Prefix “0b”
+	Diamond “<>” Operator
+	List<String> s1=new List<>();
+	Other features
+		Garbage First (G1) garbage collector
+		Java NIO 2.0
+		More precise Exception rethrow
+		Fork Join Framework
+Java 8 important new features
+	Lambda Expressions
+	Functional Interfaces - https://javaconceptoftheday.com/java-8-functional-interfaces/
+		 Must have only one abstract method and any number of default methods.
+	Why Default
+		The one liner for this could be “backward compatibility”.If JDK modifies an interface, then all classes which implements this interface will break.
+	Method References
+	Interface Default and Static Methods
+	Streams API
+	Optional
+	New Date/Time API
+	CompletableFuture
+	Repeating Annotations and Extended Annotations Support
+	Better Type Inference
+	Reflection API Supports Method Parameter Names
+	Base64 - Base-64 encoding is a way of taking binary data and turning it into text so that it's more easily transmitted in things like e-mail and HTML form data.
+	Parallel Arrays
+	java.util.concurrent Improvements
+	Nashorn JavaScript engine
+	Class dependency analyzer: jdeps
+	JVM changes: Metaspace instead of PermGen
+https://intellipaat.com/blog/interview-question/java-8-interview-questions/
+https://www.simplilearn.com/java-8-interview-questions-and-answers-article
+https://www.netjstech.com/2017/09/java-stream-api-interview-questions.html
+https://javaconceptoftheday.com/solving-real-time-queries-using-java-8-features-employee-management-system/
+
+.Java -> Java compiler -> .class(Byte code) -> JVM (Interpreter)
+
+Just in time compiler - JIT compiles bytecodes to machine code at run time and improves the performance of Java applications.Very frequently used methods are compiled as soon as JVM has started, and less used methods are compiled later. 
+      Byte Code .class -->  JIT Compiler  --> Native Machine code
+
+What are the various memory areas in JVM?
+	Class - The method area stores the class code − code of the variables and methods. 
+	Heap - The Java objects are created in this area. 
+	Stack - While running methods the results are stored in the stack memory.
+	program Counter Register - These contain the address of the instructions of the methods. 
+	native method Stack - Similar to Java stack, native methods are executed on the Native method stacks.
+
+** How loader works with respective content providers?
+ClassLoader in Java? 
+	It loads classes from different resources. Java ClassLoader is used to load the classes at run time. In other words, JVM performs the linking process at runtime. 
+	It is a subsystem of JVM which is used to load class files.It is mainly responsible for three activities
+	
+	Bootstrap class loader : It loads core java API classes present in JAVA_HOME/jre/lib directory. This path is popularly known as bootstrap path. 
+	Extension class loader : It is child of bootstrap class loader. It loads the classes present in the extensions directories JAVA_HOME/jre/lib/ext(Extension path) or any other directory specified by the java.ext.dirs system property. 
+	System/Application class loader : It is child of extension class loader. It is responsible to load classes from application class path. It internally uses Environment Variable which mapped to java.class.path. 
+	
+	Note - So order of execution is starts from System-classpath-loader then extension then Bootstrap Loader.
+
+Java Singleton - scoped by Java classloader , can not create more than one instance per classloader.
+
+1)OOP 4 principle?
+	- Encapsulation ? Is Data Hiding. Encapsulation is achieved when each object keeps its state private, inside a class. 
+	- Abstraction ? Abstraction means hiding the implementation. Applying abstraction means that each object should only expose a high-level mechanism for using it.
+		- Interface - Achieving pure abstraction 
+		- Abstract Class. 
+		- EX - Cell Phone and coffee machine 
+	- Inheritance - Inheritance is a process where child class acquires the properties of super class.
+	- Polymorphism 
+		- Compile time - Method Overloading
+		- Runtime - Method Overriding
+	
+	IS-A relationship based on Inheritance, which can be of two types Class Inheritance or Interface Inheritance.
+	Has-a relationship is composition relationship which is a productive way of code reuse.
+	
+	Association
+		Association refers to the relationship between multiple objects. It refers to how objects are related to each other and how they are using each other's functionality. Composition and aggregation are two types of association.
+
+		One to One
+		One to Many
+		Many to One, and
+		Many to Many
+		Let's understand the relationship with real-time examples. For example, One country can have one prime minister (one to one), and a prime minister can have many ministers (one to many). Also, many MP's can have one prime minister (many to one), and many ministers can have many departments (many to many).can be undirectional or bidirectional.
+
+	Aggregation
+		Aggregation is a weak association. An association is said to be aggregation if both Objects can exist independently. For example, a Team object and a Player object. The team contains multiple players but a player can exist without a team.
+		Has-A relation ship Ex- Employee HAS-A Address
+	Composition
+		It represents "part-of" relationship
+		The composition is the strong type of association. An association is said to composition if an Object owns another object and another object cannot exist without the owner object. Consider the case of Human having a heart. Here Human object contains the heart and heart cannot exist without Human.
+
+2)There are 3 ways to initialize object in Java?
+	1. Using new keyword.
+		Tester tester1 = new Tester();
+	2. Using Class.forName() method
+		Tester tester2 = (Tester)Class.forName("Tester").newInstance();
+	3. Using clone method.
+		Tester tester3 = tester1.clone();
+	4. Using Constructor.forName() method
+		Tester tester4 = Tester.class.getConstructor().newInstance();
+	5. Using Deserialization
+		bjectInputStream objectInputStream = new ObjectInputStream(inputStream );
+		Tester tester5 = (MyObject) objectInputStream.readObject();
+
+3)Different Access specifier and Access Modifier? https://www.youtube.com/watch?v=4BA4VhPyGsE&list=PLVlQHNRLflP-exWR9yw_Xp29Ctek_GQTG&index=46
+	Private - more restrictive
+	Default
+	Protected
+	Public - Less Restrictive
+	
+	Access Specifier	Inside Class	Inside Package	Outside package by subclass	Outside package
+	Private				Yes				No				No							No
+	Default				Yes				Yes				No							No
+	Protected			Yes				Yes				Yes							No
+	Public				Yes				Yes				Yes							Yes
+
+4)Which Modifiers are not used for the class? Protected and Private modifiers are not used for a class.
+
+5)Some of the non-access specifiers/modifiers in Java are:
+
+	static - Used for memory management / Belongs to the class
+	final - Used to restrict the user
+	abstract
+	transient
+	volatile - It means that changes made by one thread to shared data are visible to other threads.
+	synchronized
+	native
+	
+6)Object class methods(Java.lang.Object)- 
+	Clone , hashCode , equals , finalize , getClass , wait , notify , notifyAll,toString().
+
+7)Java static keyword? 
+	The static can be:
+		The static keyword in Java is used for memory management mainly. We can apply static keyword with variables, methods, blocks and nested classes. The static keyword belongs to the class rather than an instance of the class.
+		Static Variable (also known as a class variable) - The static variable can be used to refer to the common property of all objects,EX- the company name, college name.The static variable gets 	memory only once in the class area at the time of class loading
+		Method (also known as a class method) 
+		Block
+		We can not define main class as static only Nested class will
+		Static belongs to the class area and an instance belongs to the heap area.
+
+8)Final Keywords - The final keyword in java is used to restrict the user.
+	Significance of final in Java?
+		Final class cannot be extended 
+		Final method cannot be override
+		Final member variable cannot be assigned new value
+	
+9)Sequence of execution of, instance method, IIB, static block and constructor in java?
+	Static Block
+	Instance Initialization Block block /What is local Block 
+	constructor
+	Instance method
+	
+10)Garbage collection?	
+	GC is the process by which JVM cleans objects (unused objects) from heap to reclaim heap space in java.
+	Objects are always created on heap in java
+
+	HotSpot Heap Structure 
+		Young Generation -  New objects are allocated in Young generation.
+		Old Generation  - Some of the objects which aren't cleaned up survive in young generation and gets aged.  Eventually such objects are moved from young to old generation
+		Permanent Generation - Permgen Space contains metadata required by JVM to describe the classes and methods used in the application.
+	Throughput garbage collector is the default garbage collector for JVM in java.
+
+	Which methods is called for garbage collection in java?
+		Gc (garbage collector) calls finalize method for garbage collection. Ex- System.gc();
+		We can force early gc (garbage collection) in java by using following methods >
+		   System.gc();
+		   Runtime.getRuntime().gc();
+		   System.runFinalization();
+		   Runtime.getRuntime().runFinalization();
+11)Cloning in Java?
+	The object cloning is a way to create exact copy of an object. The clone() method of Object class is used to clone an object.
+	The java.lang.Cloneable interface must be implemented by the class whose object clone we want to create. If we don't implement Cloneable interface, clone() method generates CloneNotSupportedException.
+	The clone() method is defined in the Object class.	
+
+	Shallow cloning
+	Deep Cloning
+
+12)What is abstract and concrete class ?
+	A concrete class is a subclass of an abstract class, which implements all its abstract method.
+	Abstract methods cannot have body.
+	Abstract class can have static fields and static method, like other classes.
+	We cannot declare Abstract class has final.
+	A private, final, static method cannot be abstract, as it cannot be overridden in a subclass.
+	Abstract class cannot have abstract constructors.
+	Abstract class cannot have abstract static methods.
+	If a class extends an abstract class, then it should define all the abstract methods (override) of the base abstract class. If not, the subclass(the class extending abstract class) must also be defined as abstract class.
+
+------------------------------------------Class-----------------------------------
+13)What is difference between using instanceOf operator and getClass() in equals method?
+	Answer. If we use instanceOf it will return true for comparing current class with its subclass as well,
+	but getClass() will return true only if exactly same class is compared. Comparison with any subclass will return false.
+InstanceOf and GetClass ?
+	InstnaeOf - Comparing current class and sub class as well 
+	getClass - Same class is compared
+
+14)Can we define class as private? No, Only inner class can be private.
+
+16)What is constructor chaining in java? 
+	Constructor chaining is the process of calling one constructor from another constructor with respect to current object.
+	Constructor chaining can be done in two ways:
+		Within same class: It can be done using this() keyword for constructors in same class
+		From base class: by using super() keyword to call constructor from the base class.
+
+17)Can Constructor throws exception in Java? Yes
+	Note - Constructor of a class can never be Final in Java and Final class can never be Abstract.
+18)What is the purpose of Constructor class?
+	Java provides a Constructor class which can be used to get the internal information of a constructor in the class. It is found in the java.lang.reflect package.
+
+19)Can we create static constructor? Constructor can not be final , static , abstract, synchronized.
+	No, we cannot define a static constructor in Java, If we are trying to define a constructor with the static keyword a compile-time error will occur
+	Constructor role is only to initializing object and "new" is use to create object.
+	Name same as class name , not return any value, 
+	Can have all access modifiers.
+	
+	Blank Final Variable ?  Are initialize in constructor. 
+	class BFV{
+		final int i;
+		BFV(int x){
+			i=x;
+		}
+	}
+constructor chaining?  Calling default constructor from parameterized constructor, use this keyword to call this(); 
+
+Method Overriding? Method of superclass is overridden in subclass to provide more specific implementation in java.
+
+What is singleton class? Singleton class means only one instance of class can exist.
+	Make instance variable as Private and Static 
+	Make constructor as private.
+	Create public static instance() method.
+	Lazy initialization 
+	
+	class Singleton{
+		private static Singleton instance;
+		private Singleton(){}
+		public static Singleton getInstance(){
+			synchronized (Singleton.class) {
+                  if (instance == null)
+                        instance = new Singleton();
+                  return instance;
+			}
+		}
+		What is double checking lock in singleton?
+		Doublechecking Lock 
+		public static Singleton getInstance(){
+			if (instance == null)
+				synchronized (Singleton.class) {
+					  if (instance == null)
+							instance = new Singleton();
+					 
+				}
+			}
+			 return instance;
+		}
+	}
+	
+	Eager initialization
+	
+	class Singleton {
+ 
+		private static final Singleton INSTANCE=new Singleton();
+	 
+		private Singleton(){
+		}
+		public static Singleton getInstance() {
+					  return INSTANCE;
+		}
+ 
+	}
+	YES, we can Serialize Singleton class such that object returned by De serialization process is in same state as it was during Serialization time (regardless of any change made to it after Serialization) 
+	
+What is Singleton class and how to prevent it from multi-threading and cloning?
+	class Singleton implements Cloneable {
+		private static Singleton instance;
+		private Singleton(){}
+		public static Singleton getInstance(){
+			if (instance == null)
+				synchronized (Singleton.class) {
+					  if (instance == null)
+							instance = new Singleton();
+					 
+				}
+			}
+			 return instance;
+		}
+		@Override
+		protected Object clone() throws CloneNotSupportedException {
+			throw new CloneNotSupportedException();
+			// return super.clone();
+		}
+
+	}
+When to use volatile variable in Java?
+	Java allows threads to access shared variables. As a rule, to ensure that shared variables are consistently updated, a thread should ensure that it has exclusive use of such variables by obtaining a lock that enforces mutual exclusion for those shared variables.
+	Volatile members are never cached in CPU by jvm, they are always read from main memory i.e. from stack where variable lives.
+	*A compile-time error will occur if a final variable is declared volatile.
+
+Can we define volatile variable as final ? No
+Can we have volatile methods in java?
+	No, volatile is only a keyword, can be used only with variables.
+Can we have synchronized variable in java?
+	No, synchronized can be used only with methods, i.e. in method declaration.
+
+when to use transient variable in Java? and those member variables will no more be a part of Serialization.
+
+What is casting?
+	byte -> short -> int -> long -> float -> double 
+Can we have other return type than void for main method? NO
+Can we overload main method ? Yes 
+Can we overload static method in Java? Yes , but with diff parameters.
+Ex- p.s.v.m(String[] args);
+	p.s.v.m(String args);
+	p.s.v.m();
+
+Can we execute a program with out main method? Yes using Static block but we can execute a java program without a main method (works until Java 1.6 version). Java 7 and newer versions don’t allow this because JVM checks the presence of the main method before initializing the class.
+
+Can we override main method? NO  
+Can you override private or static method in Java? No you can not override	
+Can we override toString()? Yes   
+	In Java static binding refers to the execution of a program where type of object is determined/known at compile time i.e when compiler executes the code it know the type of object or class to which object belongs.While in case of dynamic binding the type of object is determined at runtime.
+
+--Interface 
+Is it possible to define class inside interface? Yes
+Abstract class and interface? animals / habitat / land or water.
+Can interface have constructor? No 
+Can abstract class implements interface ? Yes, can implement more than one interface
+Abstract class have constructors? Yes
+Can we create abstract class without having abstract method? Yes
+Performance implementation of interface over abstract class?
+If two interface has same methods?
+	Ex - 
+		interface Gift{void present;}
+		interface GiftPune{void present();}
+		Above is allowed.
+
+		interface Gift{void present();}
+		interface GiftPune{Boolean present();}
+		This is not allowed.
+Synchronization - Capacity to control the access of multiple thread to any shared resource.
+Serialization - Mechanism to write state of object into a byte stream.
+	Object Serialization is a process used to convert the state of an object into a byte stream, which can be persisted into disk/file or sent over the network to any other running Java virtual machine. The reverse process of creating an object from the byte stream is called deserialization.
+
+Serializable is marker interface.
+	Marker interface is an interface with no method declared.
+Marker Interface? Marker interface is an interface with no method declared.
+	In simple words Marker Interface is an interface with no fields or method within it. It helps in identifying the special object from normal objects. It just conveys to JVM that the class implementing an interface of this category will have some special behaviour. Also we can't create marker interface as you can't instruct JVM to add special behaviour to all classes implementing special interface. Now a days we do not use Marker Interface, all it's work is done by annotations.
+Difference between Final , Finally , finalize
+	Final - final can be applied to variable, method and class in java. We can define Final variable, method and class 
+	Finally - finally is a block.
+	Finalize - 	finalize is a method.
+
+Diff betn ===,equal() and ==?
+	== - checks for referential equality of object, it checks whether two references are referring to same object or not.
+
+Implicit object in JSP?
+	out	- JspWriter
+	request	- HttpServletRequest
+	response - HttpServletResponse
+	config - ServletConfig
+	application	- ServletContext
+	session	- HttpSession
+	pageContext	- PageContext
+	page - Object
+	exception -	Throwable
+
+Why clone and finalize() method are declared as protected? To make sure that they are only called on subclass object rather than object class object.
+
+Should variables be stored in local blocks? Yes
+
+What is mutable object and immutable object? 
+	immutable - Any change made to object of immutable class produces new object. Ex- String And all other Wrapper classes.
+	mutable class -  Any change made to object of mutable class doesn't produces new object. Ex HashMap is mutable class, 
+Why string is immutable in Java? why there is need to make string immutable?
+How to make class as immutable?
+	Final Class
+	Private final Member variable 
+	Constructor 
+	Don't provide setter methods 
+	
+Create immutable class?
+	Dont use setters.
+	Avoid public fields and make it final and initialize it constructor.
+	public final class ImmutableCname{
+		final String variableName;
+		public ImmutableCname(String variableName){
+			this.variableName=variableName;
+		}
+		
+		public getVariableName(){
+			return variableName;
+		}
+	}
+
+Creating string with new and ""?
+
+Which two methods need to be override by object which later used as key in HashMap? equal() and hashcode()
+
+Reference type in Java ? Strong Ref and weak Ref?
+	Strong References - Any object which has an active strong reference are not eligible for garbage collection. MyClass obj = new MyClass ();   
+	Weak References
+	Soft References
+	Phantom References
+
+List<Number> number= List<Integer>
+
+
+When to use String , StringBuffer , StringBuilder ?
+	String - 
+		String is immutable ( once created can not be changed )object . The object created as a
+		String is stored in the Constant String Pool.
+		Every immutable object in Java is thread safe ,that implies String is also thread safe . 
+		String can not be used by two threads simultaneously.
+		String once assigned can not be changed.
+	StringBuffer - each method in StringBuffer is synchronized that is StringBuffer is thread
+					safe / Because of synchronized methods its slow. 
+	StringBuilder - Not synchronized. / Fast
+
+Parameter				String								StringBuffer				StringBuilder
+Storage					String Pool							Heap						Heap
+Mutability				Immutable							Mutable						Mutable
+Thread Safe				used in a threaded environment	Used in a multi-threaded environment	Used in a single-threaded environment
+Performance				Slow								Slower than StringBuilder but faster than String	Faster than StringBuffer
+Syntax					String var =“Edureka”; 
+						String var=new String(“Edureka”);  
+
+															StringBuffer var = new StringBuffer("Edureka");	StringBuilder var = new StringBuilder("Edureka");
+
+
+----------------------------------------MultiThreading---------------------------------
+
+What is thread?
+	Thread are light weight process. Used for multiprocessing 
+Diff betn thread and process?
+	One process can have multiple Threads,Thread are subdivision of Process.
+	Threads can easily communicate with other threads of the same process using wait() and notify() methods.
+What is life cycle of Thread, explain thread states? 
+	New
+	Runnable
+	Running
+	Waiting/blocked/sleeping
+	Terminated (Dead) 
+	
+How do you implement thread in Java? Start() and run () methods?
+	Threads can be created in two ways i.e. by 
+		Implementing java.lang.Runnable interface.
+			class MyRunnable implements Runnable{
+				public void run(){   //overrides Runnable's run() method
+					   System.out.println("in run() method");
+					   System.out.println("currentThreadName= "+ Thread.currentThread().getName());
+				}
+			}
+			public class MyClass {
+				public static void main(String args[]){
+					   System.out.println("currentThreadName= "+ Thread.currentThread().getName());
+					   MyRunnable runnable=new MyRunnable(); 
+					   Thread thread=new Thread(runnable);
+					   thread.start();
+				}
+			}
+		Extending java.lang.Thread class and then extending run method.
+			class MyThread extends Thread{
+				public void run(){
+					sysout("In run method");
+			}
+			myClass{
+				MyThread my=new Mythred();
+				my.start();
+			}
+Thread pool 
+
+Advantage of using thread?
+
+How threads are synchronized? Synchronization acquires lock on method or block in which it is used.
+
+Can we start a dead thread? No
+
+Wait and sleep Method?
+	when sleep() is called on thread it goes from running to waiting state and can return to runnable state when sleep time is up. when yield() method is called on thread it goes from running to runnable state, not in waiting state. Thread is eligible to run but not running and could be picked by scheduler at anytime.
+
+
+How will you execute 4 thread in single core processor?
+
+Why wait(),notify(),notifyAll() methods are placed in Object class?
+	When wait() method is called on object by thread it waits for another thread on that object to release object monitor by calling notify() or notifyAll() method on that object.
+	When notify() method is called on object by thread it notifies all the threads 
+	which are waiting for that object monitor that object monitor is available now.
+	So, this shows that wait(), notify() and notifyAll() are called on objects only.
+
+Does Thread implements their own Stack, if yes how?  Yes, Threads have their own stack.
+
+Reflection in java? Reflection is an API which is used to examine or modify the behaviour of methods, classes, interfaces at runtime.
+	Ex- Class cls = obj.getClass(); 
+What is CountDownLatch in Java
+	CountDownLatch in Java is a kind of synchronizer which allows one Thread to wait for one or more Threads before starts processing. 
+
+	
+Enum ?
+	Enum allows specifying a list of values for a Type. Consider the example below. It declares an enum Season with 4 possible values.
+		enum Season {
+			WINTER, SPRING, SUMMER, FALL
+		};
+Can Enum Implements Interface ? Yes, Enum can implement an interface in Java.
+Can Enum extends class in Java? 
+	No, Enum can not extend class in Java. Since all Enum by default extend abstract base class java.lang.Enum,obviously they can not extend another class, because Java doesn't support multiple inheritance for classes.
+Can we create enum with out any instance? Yes 
+	public enum MessageUtil{
+	;  // required to avoid compiler error, also signifies no instance
+		public static boolean isValid() {
+				throw new UnsupportedOperationException("Not supported yet.");
+		}
+	}
+
+
+
+Can we create instance of enum outside of Enum ? you can not create enum instances outside of Enum boundry, because Enum doesn't have any public constructor, and compiler doesn't allow you to provide any public constructor in Enum.
+Can we declare constructor inside enum in Java? Yes only Private ,Public and protected are not allowed.
+Enum implements comparable interface? Yes
+Enum is used in switch? Yes, you can use Enum in Switch case in Java, in fact that's one of the main advantage of using Enum
+
+Can we use Enum with TreeSet or TreeMap in Java?
+	This is really interesting question on Java Enum, I would love to ask this to gauge knowledge of Enum. Until you know about java.lang.Enum and has looked it's code, it's more likely that you don't know that Enum implements Comparable interface, which is main requirement to be used in Sorted Collection like TreeSet and TreeMap. Since Enum by default impalement Comparable interface, they can be safely used inside TreeSet or TreeMap in Java.
+
+Decorator Strategy?
+	Strategy_pattern
+		Defines a family of algorithms,
+		Encapsulates each algorithm, and
+		Makes the algorithms interchangeable within that family.
+		Use Strategy pattern when you have to change algorithm dynamically at run time.
+
+	Decorator
+		Decorator pattern dynamically changes the functionality of an object at runtime without impacting the existing functionality of the objects.
+	When to use:
+		Add additional functionalities/responsibilities dynamically
+		Remove functionalities/responsibilities dynamically
+		Avoid too much of sub-classing to add additional responsibilities.
+		Drawbacks:
+
+	Overuse of Open Closed principle ( Open for extension and Closed for modification). Use this feature sparingly where the code is least likely changed.
+	Too many small classes and will add maintenance overhead.
+	Key difference:	Strategy lets you change the guts of an object. Decorator lets you change the skin.
+
+Diff between == and ===
+	== - Check Equality 
+	=== - Check equality and type 
+
+How to connect to DB?
+	Class.forName("com.mysql.jdbc.Driver");  - Driver class: The driver class for the mysql database is com.mysql.jdbc.Driver.
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sonoo","root","root");  - Connection URL , Username , Password
+	Statement stmt=con.createStatement();  
+	ResultSet rs=stmt.executeQuery("select * from emp");  
+
+
+Importing a package imports its sub packages as will in Java? No
+
+When lot of change are required in data which one should be used string or stringbuffer? StringBuffer 
+
+Can we call non static method from inside a static method? Yes we can call, Non static method are own by object of class and has object level scope and to call non static method from static method we need to create object of class first.
+
+--------------------------------------------------Collection-----------------------------------------
+Collection Interface
+	Java.util.Collection ​ is the root interface in the ​hierarchy of Java Collection framework​. 
+	java.util.Set extends java.util.Collection interface
+	java.util.list extends java.util.Collection interface
+
+Collections Class 
+	Utility which consists of static methods that operate on or return Collection in java.
+		"reverse" method for reversing List in java.
+		"shuffle" method for shuffling elements of List in java.
+		"unmodifiableCollection", unmodifiableSet, unmodifiableList, unmodifiableMap methods for making List, Set and Map unmodifiable in java.
+		"min" method to return smallest element in Collection in java.
+		"max" method to return smallest element in Collection.
+		"sort" method for sorting List.
+		"synchronizedCollection",  synchronizedSet, synchronizedList, synchronizedMap methods for synchronizing List, Set and Map respectively in java.
+
+What is the difference between Collection API and Streams API? What is the value added by streams actually? https://javaconceptoftheday.com/collections-and-streams-in-java/
+	Collections and Streams, both are conceptually two different things which are used for two different purposes. If the collections are used to store the data then the streams are used to perform operations on that data. 
+	Collections are used to store and group the data in a particular data structure like List, Set or Map.  
+	Streams are used to perform complex data processing operations like filtering, matching, mapping etc on stored data such as arrays, collections or I/O resources. 
+	Collections are mainly about data.
+	Streams are mainly about operations on data.
+	Collections																	Streams
+		Collections are mainly used to store and group the data.					Streams are mainly used to perform operations on data.
+		You can add or remove elements from collections.							You can’t add or remove elements from streams.
+		Collections have to be iterated externally.									Streams are internally iterated.
+		Collections can be traversed multiple times.								Streams are traversable only once.
+		Collections are eagerly constructed.										Streams are lazily constructed.
+		Ex : List, Set, Map…														Ex : filtering, mapping, matching…
+
+		
+Hash - Insertion Order Not prevent
+Tree - Sorted
+Linked - Prevent Insertion Order
+
+List  - Ordered  contains duplicate
+	ArrayList, 
+	LinkedList, 
+	Vector, 
+	CopyOnWriteArrayList 
+	
+Set  - unordered not contain duplicate 
+	HashSet, 
+	LinkedHashSet, 
+	TreeSet
+		elements are sorted in natural order (meaning of word are sorted in natural order), 
+		doesn’t allow null elements (meaning of word can’t be null), 
+		doesn’t allow duplicate elements (meaning of word can’t be duplicate)
+	ConcurrentSkipListSet - synchronized  
+	CopyOnWriteArraySet - synchronized  , fail-safe On every update operation, a separate cloned copy is created.
+
+Map - Key , value not contains duplicate
+	HashMap,
+	LinkedHashMap,
+	TreeMap, 
+	ConcurrentSkipListMap 
+		keys are sorted in natural order (words will be sorted in natural order), 
+		doesn’t allow null keys (words can’t be null)
+		doesn’t allow duplicate keys (words can’t be duplicate) and 
+		synchronized, so 2 threads won’t create synchronization problems (will take care of different uses adding words concurrently)
+	Hashtable, 
+	ConcurrentHashMap - ConcurrentHashMap is divided into different segments based on concurrency level. So different threads can access different segments concurrently.
+	IdentityHashMap - 
+		IdentityHashMap can be used to maintain proxy objects. Use when reference equality check and instead of logical equality.
+		doesn't use equals() and hashCode() method for comparing object Instead uses equality operator "=="  to compare keys and values
+	WeakHashMap - 
+		java.util.WeakHashMap is hash table based implementation of the Map interface, with weak keys.
+		An entry in a WeakHashMap will be automatically removed by garbage collector when its key is no longer in ordinary use. 
+	EnumMap 
+
+List					Duplicate elements	insertion order		Sorted by natural order		synchronized	null elements	Iterator
+ArrayList				Yes					Yes																Yes				Iterator & listIterator are Fail-fast
+LinkedList				Yes					Yes																Yes				Iterator & listIterator are Fail-fast
+CopyOnWriteArrayList	Yes					Yes												Yes				Yes				Iterator & listIterator Fail-safe
+												
+Set						Duplicate elements	insertion order		Sorted by natural order		synchronized	null elements	Iterator
+HashSet					No																					Yes				Fail-fast
+LinkedHashSet			No					Yes																Yes				Fail-fast
+TreeSet					No										Yes											No				Fail-fast
+ConcurrentSkipListSet	No										Yes							Yes				No				Fail-safe
+						
+Map						Duplicate Keys		insertionOrderOfJKeys	Sorted by natural order of keys	synchronized	null keys or null values			Iterator
+HashMap																												one null key and many null values	All are Fail-fast
+Hashtable																							Yes				No									All are Fail-fast
+ConcurrentHashMap																					Yes				No									All are Fail-safe
+TreeMap																Yes												Null key not allowed,				All are Fail-fast
+																													Allow many null values	
+ConcurrentSkipListMap												Yes								Yes				No									All are Fail-safe
+
+
+Convert HashMap to ArrayList with Iterator?
+How HashMap works?
+How HashSet works?
+Sort employee object based on salary?
+Diff Vector and ArrayList?
+How to make HashMap object synchronized with out using key value?
+Default capacity of HashMap
+Arraylist and linkedlist in Java?
+HashSet and linkedHashset
+Difference between iterator and enumeration?
+	Enu - 
+		Only traverse the collection.  / hasMoreElement() , NextElement()
+		Used to traverse legacy class like vector , hasTable , stack.
+		Failsafe concurentHashmap.
+	Itr - 
+		Traverse and remove. / hasNext() , next() , remove().
+		Most classes in collection like ArrayList, HashSet, Linkedlist.
+		Failfast Arraylist , vector , HashMap.
+	
+	Property										java.util.Enumeration										java.util.Iterator
+1	Remove elements during iteration				Not possible 												Allows to remove elements.
+2	Improved naming conventions in Iterator			nextElement() hasMoreElements()								next(), hasNext()
+3	Introduced in which java version 				JDK 1.0														​JDK 2.0 
+	Iterator was introduced to replace Enumeration in the Java Collections Framework. 	
+4	Recommendation 																								recommends
+5	Enumeration and Iterator over Vector			fail-safe													fail-fast			
+
+Iterator has remove method? Yes
+Concurrent HashMap? It is synchronized map  which is divided into diff segments based on concurrency level diff thread can access diff seg concurrently.
+What is Concurrent Hashmap? Compare it with Hashmap. 
+Which methods you need to override to use any object as key in HashMap? equal and hashCode
+Can we add a new entry to Hashmap while iterating? No its fail fast
+How to sort used defined Object in Java? Comparable(compareTo()) and comparator(compare() and equal()).
+	class Employee implements Comparable<Employee>{
+		String name;
+		String id;
+		public Employee(String name, String id) {
+			this.name = name;
+			this.id = id;
+		}
+	   
+		@Override
+		public int compareTo(Employee otherEmployee) {
+		   //sort Employee on basis of name(ascending order)
+		   return this.name.compareTo(otherEmployee.name);
+		}
+	}
+ 
+	class Employee{
+		String name;
+		String id;
+	   
+		public Employee() {}
+	   
+		public Employee(String name, String id) {
+			this.name = name;
+			this.id = id;
+		}
+	   	//Inner class
+		class ComparatorName  implements Comparator<Employee>{
+		   @Override
+			public int compare(Employee obj1, Employee obj2) {
+			   //sort Employee on basis of name(ascending order)
+			   return obj1.name.compareTo(obj2.name);
+			}
+		}
+		//static nested class
+		static class ComparatorId  implements Comparator<Employee>{
+		   @Override
+			public int compare(Employee obj1, Employee obj2) {
+			   //sort Employee on basis of id(ascending order)
+			   return obj1.id.compareTo(obj2.id);
+			}
+		}
+	 
+	}
+List vs set 
+HashMap vs HasTable?
+ArrayList vs LinkedList?
+equal vs hashTable?
+ArrayList vs HashSet
+compare HashMap / HashTable / Treemap?
+HashSet / Linkedhashset /TreeSet?
+ArrayList / LinkedList / Vector
+Iterator is class or interface?
+Legacy class?
+HashCode and equal method contract?
+Loadfactor and capacity ?
+Stack implementation?
+Reverse Array?
+Four ways to check if an array contains a value?
+	-	Arrays.asList(arr).contains("Value");
+    -	<String> set=new HashSet<String>(Arrays.asList(arr));
+		set.contains(value);
+	- 	for(String s:arr){
+			if(s.equals(value)){
+				return true;
+			}
+		}
+		
+Convert map to list?
+What are different ways of iterating over elements in Set?
+	Set<String> hashSet=new HashSet<String>(); 
+	Iterator<String> iterator=hashSet.iterator();
+	Enumeration<String> listEnum=Collections.enumeration(set);  
+	for (String string : set) {
+		   System.out.println(string);
+	}
+What are different ways of iterating over keys, values and entry in Map?
+	Iterator<Integer> keyIterator=hashMap.keySet().iterator();
+	Iterator<String> valueIterator=hashMap.values().iterator();
+	Iterator<Entry<Integer, String>> entryIterator=hashMap.entrySet().iterator();  
+	while(keyIterator.hasNext()){
+	  System.out.println(keyIterator.next());
+	} 
+Sort map on basis of key?
+Equal and hashcode contract? 		
+How to sort array?
+How to store unique element in array?
+	Set<Integer> uniqKeys = new TreeSet<Integer>();
+	uniqKeys.addAll(Arrays.asList(numbers));
+Find duplicate in array?		
+	// First solution : finding duplicates using brute force method
+	// Second solution : use HashSet data structure to find duplicates
+	// Third solution : using Hash table data structure to find duplicates
+
+how to sort employee object in java ?	
+		Comparator sortingByName = new Comparator() {
+		   @Override
+		   public int compare(Student s1, Student s2) {
+			return s1.getName().compareTo(s2.getName());
+		   }
+		};
+		Using labda
+		Comparator sortingByName =(Student s1, Student s2)->s1.getName().compareTo(s2.getName());
+
+Any key value pair collection in java where key has to be in sorted order? TreeMap , if we try to add any custome object as key to Treemap it will give us class cast exception 
+I have a set of elements which are not duplicates. Which collection you would use to store these objects?		
+Can you explain the hashing technique to make Java store all specific objects in one bucket? 
+Hash Collision?
+Can we use null element in TreeSet? Give reason?
+	No, TreeSet does not allows to store any null keys.	Any attempt to add null throws runtimeException (NullPointerException).
+
+Let’s say you have to build dictionary and multiple users can add data in that dictionary? And you can use 2 Collection classes? Which Collection classes you will prefer and WHY?
+	We must use ConcurrentSkipListMap and TreeSet.
+	ConcurrentSkipListMap<String, TreeSet<String>> myDictionary = new ConcurrentSkipListMap<String, TreeSet<String>>();
+
+-------------------------------------------Design patterns---------------------------------------- 
+
+Do you have deep knowledge of design patterns? 
+Singleton Pattern - Create only once class object through system. / One and only one instance of particular class is carted per classloader.
+	Private constructor and static instance make class singleton.
+prototype - Clone is the simplest approach to implement prototype pattern. 
+	Prototype pattern refers to creating duplicate object while keeping performance in mind. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+	This pattern involves implementing a prototype interface which tells to create a clone of the current object. This pattern is used when creation of object directly is costly. For example, an object is to be created after a costly database operation. We can cache the object, returns its clone on next request and update the database as and when needed thus reducing database calls.
+Builder Pattern 
+	The builder pattern provides a build object which is used to construct a complex object called the product. It encapsulates the logic of constructing the different pieces of the product
+Factory Pattern 
+	In Factory pattern, we create object without exposing the creation logic to client and the client use the same common interface to create new type of object.
+	The idea is to use a static member-function (static factory method) which creates & returns instances, hiding the details of class modules from user.
+Abstract Factory 
+	Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+	A hierarchy that encapsulates: many possible "platforms", and the construction of a suite of "products".
+Bridge
+What is the design pattern used in Spring IOC? 
+Do you know what design pattern is used in java IO stream?
+Composite design pattern Strategy - https://www.geeksforgeeks.org/composite-design-pattern/
+	In an organization, It have general managers and under general managers, there can be managers and under managers there can be developers. Now you can set a tree structure and ask each node to perform common operation like getSalary().
+	Composite design pattern treats each node in two ways:
+	1) Composite – Composite means it can have other objects below it.
+	2) leaf – leaf means it has no objects below it.
+	
+----------------------------------------------Exception ------------------------------------------
+Exception Hierarchy? 
+							Object 
+						   Throwable
+			Error 							Exception 
+			
+		Virtual machine errr		Checked and Unchecked
+		
+Explain exception handling ? Checked and Unchecked Exception?
+ClassNotFoundException and noClassDefination Exception?
+	ClassNotFoundException is a runtime exception that is thrown when an application tries to load a class at runtime using the Class.forName() or loadClass() or findSystemClass() methods ,and the class with specified name are not found in the classpath. 
+	
+	NoClassDefFoundError is an error that is thrown when the Java Runtime System tries to load the definition of a class, and that class definition is no longer available. The required class definition was present at compile time, but it was missing at runtime. 
+
+What will happen if we put return statement or system.exit(0) in try or catch block ? will finally block execute?
+We can use return statement in finally block? Yes
+Diff between throw , throws , throwable?
+	throw is used to throw an exception manually. You can throw an exception from any method or block. But, that exception must be of type java.lang.Throwable class or it’s sub classes.
+	throws is used in the method signature to indicate that this method may throw mentioned exceptions. The caller to such methods must handle the mentioned exceptions either using try-catch blocks or using throws keyword. 
+	Throwable is a super class for all types of errors and exceptions in java. If you want to create your own customized exceptions, then your class must extend this class. 
+Can we catch multiple exception in same catch clause? Yes depends on inheritance hierarchy.
+
+---------------------------------------------- Generics-------------------------------------------
+
+What is the use of generics? How generics help developer?  https://www.javatpoint.com/generics-in-java
+Which case do you use ? (Question Mark) in generics? 
+	Generics programming deal with type-safe objects. It makes the code stable by detecting the bugs at compile time.
+	Before generics, we can store any type of objects in the collection, i.e., non-generic. Now generics force the java programmer to store a specific type of objects.
+	
+	3 advantages of generics. 
+		 Type-safety: We can hold only a single type of objects in generics. It doesn't allow to store other objects.
+		 Type casting is not required: There is no need to typecast the object.
+		 Compile-Time Checking: It is checked at compile time so problem will not occur at runtime. 
+Ex-	ClassOrInterface<Type> 
+	ArrayList<String> - ArrayList<String> list=new ArrayList<String>();  
+
+Generic class
+	A class that can refer to any type is known as a generic class. Here, we are using the T type parameter to create the generic class of specific type.
+	class MyGen<T>{  
+		T obj;  
+		void add(T obj){this.obj=obj;}  
+		T get(){return obj;}  
+	} 
+	
+T - Type E - Element K - Key N - Number V - Value 
+
+Wildcard in Java Generics 
+	The ? (question mark) symbol represents the wildcard element. It means any type. If we write <? extends Number>, it means any child class of Number, e.g., Integer, Float, and double. Now we can call the method of Number class through any child class object.
+	public static void drawShapes(List<? extends Shape> lists)
+	
+	Upper Bounded Wildcards
+		It restricts the unknown type to be a specific type or a subtype of that type. It is used by declaring wildcard character ("?") followed by the extends
+		Ex- List<? extends Number>  
+	
+	Unbounded Wildcards
+		The unbounded wildcard type represents the list of an unknown type such as List<?>.	
+		Ex- display(List<?> list)  
+	
+	Lower Bounded Wildcards
+		The purpose of lower bounded wildcards is to restrict the unknown type to be a specific type or a supertype of that type. 
+		Ex- List<? super Integer>  
+-------------------------------------------------------------------------------------------------------
+ACID properties - 
+	Atomicity 
+	Consistency 
+	isolation 
+	durability
+
+Java exceptions Java 8, filter, map, reduce collection multithreading Java programming
+
+2. Merge Sort
+
+3. https://leetcode.com/problems/n-queens/
+
+4. https://leetcode.com/problems/sudoku-solver/solution/
+
+5. https://leetcode.com/problems/combination-sum/description/
+
+6.. https://www.programcreek.com/2014/04/leetcode-surrounded-regions-java/
+
+7. Check a string contain 26 letters
+		stringValue.chars()
+		.filter(i -> i >= 'a' && i <= 'z')
+		.distinct().count() == 26;
+	--------------------------------------------------
+		Set<Integer> chars = new HashSet<>();
+		String s = /* Your lowercase string */;
+		s.length() > 25 && s.chars()
+		.filter(i -> i >= 'a' && i <= 'z') //only alphabet
+		.filter(chars::add)                //add to our tracking set if we reach this point
+		.filter(i -> chars.size() == 26)   //filter the 26th letter found
+		.findAny().isPresent();            //if the 26th is found, return
+	---------------------------------------------------
+		s = "a dog is running crazily on the ground who doesn't care about the world qwertyuioplkjhgfdsazxcvbnm";
+		s = s.replaceAll("[^a-zA-Z]", "");
+		s = s.toLowerCase();        
+		s = s.replaceAll("(.)(?=.*\\1)", "");
+		System.out.println(s);
+		System.out.println(s.length()); //26 (check last part added to String)  So, Yes
+
+8. there are lots brackets in a string , check if all of these brackets are paired for example : {[()]} is paired , {(}) is not
+
+9. Find the length of max object in a list of objects
+
+10. Given a string return true if it contains all the alphabets from a-z
+	public static boolean checkStringForAllLetterUsingStream(String input) {
+		long c = input.toLowerCase().chars()
+		  .filter(ch -> ch >= 'a' && ch <= 'z')
+		  .distinct()
+		  .count();
+		return c == 26;
+	}
+11. First one was to check the valid parentheses
+
+12. Second one was to implement Math.pow(x,n)
+
+13. Reverse the string by words. Like : Hello World, output: World, Hello
+	Reverse String
+		Convert the input string into character array by using the toCharArray():	
+			String input = "suraj Badhe"; 
+			char[] temparray = input.toCharArray(); 
+			int left, right = 0; 
+			right = temparray.length - 1; 
+	  
+			for (left = 0; left < right; left++, right--) { 
+				// Swap values of left and right 
+				char temp = temparray[left]; 
+				temparray[left] = temparray[right]; 
+				temparray[right] = temp; 
+			} 
+			output : ehdab jarus
+		
+		Using StringBuffer
+			String str = "Geeks"; 
+			// conversion from String object to StringBuffer 
+			StringBuffer sbr = new StringBuffer(str); 
+			// To reverse the string 
+			sbr.reverse(); 
+			System.out.println(sbr); 
+	
+	Reverse Number
+		Example 1: Reverse a Number using a while loop in Java
+			int num = 1234, reversed = 0;
+			while(num != 0) {
+				int reminder = num % 10;
+				reversed = reversed * 10 + reminder;
+				num =num/10;
+			}
+			System.out.println("Reversed Number: " + reversed);
+
+14.Find duplicates in an array
+	First Approach - 
+		All we are doing here is to loop over an array and comparing each element to every other element.
+	Second Approach -
+		 All you need to know is that Set doesn't allow duplicates in Java. Which means if you have added an element into Set and trying to insert duplicate element again, it will not be allowed.
+
+15.Swap int no with out using temp?
+	int a=10;
+	int b=20;
+	
+	a=a+b; 30
+	b=a-b; //30-20 = 10
+	a=a-b  //30-10 = 20
+16. Find the pair of integers in an array whose sum is x.
+	public static void main(String[] args) {
+		int[]  arr= {1,3,5,4,2,3,1};
+		int sum=6;
+		for (int i = 0; i < arr.length; i++) {
+			for(int j=i+1;j<arr.length;j++) {
+				
+				if(arr[i]+arr[j]==sum) {
+					System.out.println(arr[i]+""+""+arr[j] +"---Sum"+(arr[i]+arr[j])); 
+				}
+			}
+		}
+
+	}
+17. find length of string without using function or loop?
+	int length=0;
+	while(!str.equals("")){
+		str=str+substring(1);
+		++length;
+	}
+18. find missing no ? 1,2,4,5,7 (6 is missing )
+	- get sum 
+	total = n(n+1)/2
+	- subtract all the no from sum you will get the missing no.
+
+19. Count occurrences of each character in string ?
+	long count = someString.chars().filter(ch -> ch == 'e').count();
+	
+	static void charCount(String Str){
+		
+		HashMap<character,Integer> charMap=new HashMap<character,Integer>();
+		char[] cArr=str.toCharArray();
+		forEach(char k:cArr){
+			if(charMap.containsKey(k)){
+				charMap.put(k,charMap.get(k)+1)
+			}else{
+				charMap.put(k,1);
+			}
+		
+		}
+	
+	}
+	Same code will be use for duplicate char / get keySet and iterate it and check its getter than 1.
+
+
+20.Fibonacci series in Java	
+	In fibonacci series, next number is the sum of previous two numbers for example 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. The first two numbers of fibonacci series are 0 and 1.
+		int count=5;
+		int first=0;
+		int second=1;
+		temp=0;
+		for(int i=0; i<count; i++){
+			
+			temp=first+second;
+			first=second;
+			second=temp;
+		
+		}
+	
+	static void printFibonacciRecursion (int count){    
+		if(count>0){    
+			 n3 = n1 + n2;    
+			 n1 = n2;    
+			 n2 = n3;    
+			 System.out.print(" "+n3);   
+			 printFibonacci(count-1);    
+		 }    
+	 }
+	 static void fibonacci (int no){    
+			if (n <= 1) 
+			   return n; 
+		return fib(n-1) + fib(n-2); 
+		} 
+	 }
+
+21. Number sum 
+		public int sumOfnumber(int no){
+			int sum ,rem=0;
+			while(no!=0){
+				rem=no%10;
+				no=no/10;
+				sum+=rem;
+			}
+			return sum;
+		}
+22. factorial 
+	public static int factorial(int num){
+		int factorial=1;
+		while(num>0){
+			factorial=factorial*num;
+			num--;
+		}
+	}
+23.Palindrome number in java: 
+	A palindrome number is a number that is same after reverse. For example 545, 151, 34543, 343, 171, 48984 are the palindrome numbers. It can also be a string like LOL, MADAM etc.
+		int num = 121, reversed = 0;
+		while(num != 0) {
+			int reminder = num % 10;
+			reversed = reversed * 10 + reminder;
+			num =num/10;
+		}
+		if(reversed==num)    
+		   System.out.println("palindrome number ");    
+		  else    
+		   System.out.println("not palindrome");    
+
+24. find sum of two largest element from array		   
+	
+1) Algorithm part: - We have a list of candidates name, your mission is finding candidates voted more than half of the list of candidates. - NQueen or Sudoku problem. The link here: https://leetcode.com/problems/n-queens/
+
+JMS (Java Message Service) is an API that provides the facility to create, send and read messages. It provides loosely coupled, reliable and asynchronous communication.
+JMS is also known as a messaging service.
+	There are two types of messaging domains in JMS.
+		Point-to-Point Messaging Domain - In PTP model, one message is delivered to one receiver only. Here, Queue is used as a message oriented middleware (MOM).
+		Publisher/Subscriber Messaging Domain - One message is delivered to all the subscribers. It is like broadcasting.

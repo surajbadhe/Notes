@@ -1,0 +1,111 @@
+What is Mule ESB?
+	Mule, the runtime engine of Anypoint Platform, is a lightweight Java-based enterprise service bus (ESB) and integration platform that allows developers to connect applications together quickly and easily, enabling them to exchange data. It enables easy integration of existing systems, regardless of the different technologies that the applications use, including JMS, Web Services, JDBC, HTTP, and more. The ESB can be deployed anywhere, can integrate and orchestrate events in real time or in batch, and has universal connectivity.
+Private and Public flow
+Async and synchronous flow
+Diff Mule 3 and 4
+	Integrated and Effective Error handling
+		In Mule 3 exception handling is based on Java, Mule 4 error handling framework enables direct handling by having integrated and configurable error handling mechanisms. 
+	Better Application Configuration: Maven
+		Mule 4 has come with profound integration with Maven
+	Simplified Event Processing and Messaging
+		Mule 4 event architecture, the inbound and outbound properties in Mule 3 are merged under one category “Attributes” and this holds the payload’s metadata information, any file content, updates on file, query parameters, flow's message source, inbound properties, outbound properties and message processor info.
+	DataWeave 2.0 For Better Data Handling
+		In Mule 3 releases, developers are to use Mule Expression Language (MEL) as well as DataWeave for developing mule messages. 
+Pom components 
+API Gateway API Autodiscovery concepts
+	Use API Autodiscovery to pair an API in API Manager to its deployed Mule application.
+	By configuring autodiscovery you can use policy management, and API Analytics, accessed from within API Manager.
+
+Load Balancer 
+	CloudHub Load Balancers - https://www.easystepin.com/cloud-solutions/solution/mulesoft-cloudhub
+	CloudHub is the integration platform as a service (iPaaS) component of Anypoint Platform™.
+	With CloudHub you can deploy cross-cloud integration applications in the cloud, create new APIs, integrate on-premises applications with cloud services, and more.
+	As a fully cloud-based solution, CloudHub offers high availability and scalability, whilst providing a secure connection to on-premises systems.
+		Shared Load Balancer
+			Provides basic load balancing functionality.
+			The shared load balancer provides basic functionality, such as TCP load balancing. Shared load balancers don’t allow you to configure custom SSL certificates or proxy rules.
+		Dedicated Load Balancer
+			Enables you to deploy and configure one or more custom load balancers within an Anypoint Virtual Private Cloud (Anypoint VPC).
+			Handle load balancing among the different CloudHub workers that run your application.
+			Define SSL configurations to provide custom certificates and optionally enforce two-way SSL client authentication.
+			Configure proxy rules that map your applications to custom domains.
+
+Type of exception strategies in mule 
+How error handling is done in mule 
+Topic vs queue 
+Pass and Saas difference 
+Application scaling type 
+What is object store and why it used? https://blogs.mulesoft.com/dev/anypoint-platform-dev/new-mule-4-objectstore-connector/
+	An ObjectStore is a Mule component which allows for simple key-value storage. Although it can serve a wide variety of use cases, it’s mainly designed for:
+		Storing synchronization information like watermarks
+		Storing temporal information like access tokens
+		Storing user information
+
+Error and exception strategy.
+inbound and outbound properties ?
+	https://docs.mulesoft.com/mule-runtime/3.9/mule-message-structure
+Service level access (SLA)
+Query parm 
+path parm 
+
+Http-listener-main 
+
+Flow variable and expression. 
+Variables are user-defined meta-data about a message. Variables have three scopes:
+Flow variable, Sessions and Record Diff
+	Flow variables apply only to the flow in which they exist.
+	Session variables apply across all flows within the same application.
+	Record variables apply to only to records processed as part of a batch.
+Choice variable 
+
+Http Listener and Http requester 
+what is TLS in Http request configuration
+How to generate key store
+Authentication and authorization 
+Datawaeve 
+Datasence 
+SMTP is used for email 
+property connector
+validation componentsObject Store
+Anypoint Platform 
+Api exchange
+APi Manager 
+Runtime manager 
+What is API gateway - https://www.youtube.com/watch?v=vHQqQBYJtLI
+	Separate out cross cutting concerns like security , Authentication , authorization 
+	The API gateway points to the backend APIs and services that you define and abstracts them into a layer that Anypoint Platform manages.
+	API gateways are a common component in modern architectures, helping organizations route their API requests, aggregate API responses, and enforce service level agreements through features like rate limiting. But an API gateway also plays an important role as a secure access point that protects an organization’s APIs. API gateways implement industry-standard encryption and access control –– giving API developers a way to let people in and direct them to the right place. Gateways point to the backend APIs and services that you define and abstract them into a layer that can be regulated by your API management solution.
+	- Provide inline proxy control over API.
+	- Identification of API requests through credential and token validation, as well as other authentication means. 
+	- Authorized traffic to pass through the API to backend services.
+	- Metering the traffic using rate limiting and throttling. 
+	- Logging all transactions and applying runtime policies to enforce governance.
+
+	Orchestration is the automated configuration, management, and coordination of computer systems, applications, and services.
+What is rate limiting and throttling 
+	Rate Limiting - policy limits the number of requests an API accepts within a window of time. The API rejects requests that exceed the limit.
+	Multiple clients allowed to send called an Application Rate Limiting. If they are starting to send too many requests, their connection gets throttled. This means the processing slows down but does not disconnect.
+SSL(Secure socket layer) in api gateway
+What is One way and two way SSL ? http://tutorialspedia.com/an-overview-of-one-way-ssl-and-two-way-ssl/
+	Secure socket layer - https://www.youtube.com/watch?v=SJJmoDZ3il8
+	Successor of SSL -> TLS Transport layer security 
+	Http	                    server  
+	Https     encryption        server
+			  ssl / tcl 
+	
+	
+Policies in mule 
+
+
+1. What is RAML and why we use it? RESTful API Modelling Language
+	RAML can also be used for documentation purpose.Helps client know, what the service is and what/how all operations can be invoked.
+	RAML contains endpoint URL, request/response schema, HTTP methods and query and URI parameter.
+	RAML helps the developer in creating the initial structure of this API.
+	
+APIkit Router
+	During your app development lifecycle, you can build Mule REST or SOAP APIs from an API specification using APIkit.
+	Based on an API RAML file, it routes arriving calls to the corresponding flow depending on the resource and method. See APIkit documentation.
+Choice
+	Evaluates a message against specified criteria, then sends it to the first message processor that matches those criteria.
+	
+The Transform Message component carries out transformations over the input data it receives. You can explicitly write out a transformation in DataWeave language, or you can use the UI to build it implicitly through dragging and dropping elements.

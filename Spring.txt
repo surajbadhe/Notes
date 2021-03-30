@@ -1,0 +1,224 @@
+------------------------Spring--------------------
+Your Spring Project Structure 
+Difference between spring and spring boot
+Questions from the previous project, How you secure rest API. Spring Security Configuration.
+(From the previous project) How you will determine the user credentials.
+What is Spring Security and its Methods?
+
+Diff between IOC and DI?IOC Container?
+Dependency Injection
+	IoC is a design paradigm with the goal of giving more control to the targeted components of your application, the ones getting the work done. While Dependency injection is a pattern used to create instances of objects that other objects rely on without knowing at compile time which class will be used to provide that functionality.
+	
+	a constructor injection? 
+	a setter injection?
+	an interface injection?
+Why You Should Use Constructor Injection in Spring ? https://reflectoring.io/constructor-injection/
+
+How to validate request header in Spring?
+Explain Bean lifecycle in Spring framework?
+How to get the id field from headers and store it to a variable ? @RequestHeader annotation
+	
+	@GetMapping("/greeting")
+	public ResponseEntity<String> greeting(@RequestHeader("accept-language") String language) {
+		return new ResponseEntity<String>(greeting, HttpStatus.OK);
+	}
+	**
+	public ResponseEntity<String> listAllHeaders(@RequestHeader Map<String, String> headers) {
+	
+RestController vs controller
+	RestController = @controller + @resposeBody
+Http Methods and when you will use what.
+When you will use Post even if you only want to get data not posting.
+
+Singleton. Which scenario?
+What is a singleton design pattern? - How to validate request header in Spring?
+Inner Beans In Spring?
+Modules of Spring Framework?
+Type of container Spring Container 
+What are the different scopes of spring bean?
+	Singleton : It returns a single bean instance per Spring IoC container.This single instance is stored in a cache of such singleton beans, and all subsequent requests and references for that named bean return the cached object.If no bean scope is specified in bean configuration file, default to singleton.
+
+	Prototype : It returns a new bean instance each time when requested. It does not store any cache version like singleton.
+
+	Request : It returns a single bean instance per HTTP request.
+
+	Session : It returns a single bean instance per HTTP session (User level session).
+
+	GlobalSession : It returns a single bean instance per global HTTP session. It is only valid in the context of a web-aware Spring ApplicationContext (Application level session).
+Spring Bean lifecycle?
+AOP and its benefits?
+Application Context and BeanFactory?
+Different type of auto-wiring?
+Different Controller inside Spring?
+ContextLoaderListener ?
+ViewResolver 
+MultipartResolevr 
+How do you handle exception inside spring MVC ?
+Scope of useBeans ?  Page/Request/Session/Application 
+Singleton Bean ? Per container per bean / Scope of bean def to single obj instance per spring IOC container.
+Where you will find JSP class in tomcat? tomcat->work->catlina->localhost->projectname->org->apache->jsp->.class
+Session Tracking technique?
+	Cookies 
+	Hidden form fields
+	URL rewriting
+	HttpSession
+Diff types of transaction management spring supports?
+-------------------------------------------Spring Boot---------------------------------------
+Source of Below Questions(https://www.youtube.com/watch?v=A6KJeSmoHuc)
+
+What is Spring boot and its features?
+	Spring Boot is an open source Java-based spring module framework used to create a Micro Service. Use to create a stand-alone and production ready spring applications
+	
+	Features 
+		Spring CLI
+		Starter Dependency 
+		Spring initializer 
+		Auto-Configuration 
+		Spring Actuator 
+		Logging and Security
+What are the advantage of Spring boot?
+	Gives you prodecton ready code 
+	Auto configuration 
+	Spring cli 
+	Spring initializer
+	
+What are the requirement for SpringBoot 2 / mim requirement for SpringBoot?
+	SB 2.2.7 Requires 
+		Java8 / Spring framework 5.1.9 / Maven 3.3 / tomcat9.0
+
+Spring-boot-starter-parents?
+	The spring-boot-starter-parent is a special starter that provides useful Maven defaults. It also provides a dependency-management section so that you can omit version tags for “blessed” dependencies.
+
+What is Spring boot starter?
+	Starters are a set of dependency descriptors that you can include in your application.If you want to develop a web application or an application to expose restful services,
+	We dont need to specify the dependency version in Sb.
+	
+	spring-boot-starter-web	It is used for building the web application, including RESTful applications using Spring MVC. It uses Tomcat as the default embedded container.
+	spring-boot-starter-jdbc	It is used for JDBC with the Tomcat JDBC connection pool.
+	spring-boot-starter-data-jpa	It is used for Spring Data JPA with Hibernate.
+	spring-boot-starter-security	It is used for Spring Security.
+	spring-boot-starter-aop	It is used for aspect-oriented programming with Spring AOP and AspectJ.
+	spring-boot-starter-test	It is used to test Spring Boot applications with libraries, including JUnit, Hamcrest, and Mockito.
+	spring-boot-starter-thymeleaf	It is used to build MVC web applications using Thymeleaf views.
+Differance JPA and Hibernate ?
+	What Is the Difference Between Hibernate and Spring Data JPA? Hibernate is a JPA implementation, while Spring Data JPA is a JPA Data Access Abstraction. ... Hibernate provides a reference implementation of the Java Persistence API that makes it a great choice as an ORM tool with benefits of loose coupling.
+how you start and stop spring boot executable jar?
+Spring Boot Dev tool?
+Profile in spring boot?
+What is actuator?	
+How to disable specific auto-configuration in Sb?
+What is LiveReload?
+Advantage of Externalized configuration?
+	Application properties 
+	Command line properties 
+	Profile Specific Properties 
+Hot swapping in Spring Boot?
+Embedded container and war?
+logging in spring boot ?
+How spring boot is helpful to design microservices
+Differance between @contoller and @RestController?
+What is use of Hystrix and circuit breaker ? how to implement it?
+	Circuit breaker is a design pattern used in software development. It is used to detect failures and encapsulates the logic of preventing a failure from constantly recurring, during maintenance, temporary external system failure or unexpected system difficulties. 
+How to create bean in spring boot java class?
+How you secure your spring boot and mule application in your project 
+Diff of pathvariable and requset parm and queryparm ? which is better to use
+How you handle cross domain errors
+Practice you follow while designing restful web services?
+What is SQl Injection 
+what is the use of @Component, @service, @repository annotation ?
+Uses of Spring Boot annotation -  
+	@Component, @Service, @Repository and @Controller annotations are used for automatic bean detection using classpath scan in Spring framework.
+	Spring automatically scans and identifies all these classes that are annotated with below annotation.
+	@Component - @Component is a generic annotation used across application.
+	@Controller -  annotate classes at presentation layers level, mainly used in Spring MVC.
+	@Service - marks a Java class that performs some service, such as executing business logic, performing calculations, and calling external APIs. 
+	@Repository - annotate classes at persistence layer, which will act as database repository.
+		
+	@Autowired 
+	@Qualifier 
+	@controller 
+	@RequestMapping 
+	@ConditionalOnMissingBean - Auto configuration to back off when bean exist
+	
+	@Valid annotation which is required to kick in the validation of the information received,
+	@RequestBody annotation which signifies that the payload in the body of the request will be mapped to a model class which it annotates,
+	
+	EX : 
+		@RestController
+		@RequestMapping("/users")
+		public class UserController {
+			@PostMapping(produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
+			public UserRest createUser(@Valid @RequestBody UserDetailsRequestModel requestUserDetails) {
+				
+				UserRest returnValue = new UserRest();
+				returnValue.setFirstName("Sergey");
+				returnValue.setLastName("Kargopolov");
+				return returnValue;
+			}
+		}
+What is the use of @	AutoCongiguration?
+	Automatic configuration features of the Spring Boot application, which automatically configures things if certain classes are present in classpath
+	Spring Boot 1.0
+	The @EnableAutoConfiguration annotation allows you to selectively exclude certain classes from auto-configuration using exclude attribute as shown below:
+
+	@Configuration
+	@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+	public class MyConfiguration {
+	  //.. Java code
+	}
+What is the use of @SpringbootApplication? 
+	Spring Boot 1.2 
+	It's actually a combination of three annotations:
+		@Configuration, which is used in Java-based configuration on Spring framework, 
+		@ComponentScan to enable component scanning of components you write like @Controller classes.
+		@EnableAutoConfgiuration itself, which is used to allow for auto-configuration in Spring Boot application.
+	@SpringBootApplication does three things, it allows you to run the Main class as a JAR with an embedded container. It enables Java configuration, and it also enables Component Scanning.
+
+What if we remove @SpringbootApplication for class ? will it still behave has spring boot application 
+Types of configuration files used in springboot.
+Difference between YAML(.yml) and .properties file in Java SpringBoot?
+	Configurations properties required to make the application up and run like to connect with the database what are the credentials, on which port the application will run, etc.
+	By using two ways we can load tha yaml file.
+		YamlMapFactoryBean load as map
+		YamlPropertiesFactoryBean load as properties
+How to register custom auto-configuration?
+	Mentioned fully qualified name under @EnableAutoConfgiuration KEY META-INF/spring.factory file
+Profile Specific configuration 
+	Dev - application-dev.properties 
+	Prod - application-prod.properties 
+	
+	While running application pass 
+		-Dspring-profile.active=prod 
+	or you can use 
+		spring-profile.active=prod in application.properties
+
+What Is a Circular Dependency?- https://www.baeldung.com/circular-dependencies-in-spring
+	It happens when a bean A depends on another bean B, and the bean B depends on the bean A as well:
+	
+	When Spring context is loading all the beans, it tries to create beans in the order needed for them to work completely. For instance, if we didn’t have a circular dependency, like the following case:
+	Bean A → Bean B → Bean C
+	Spring will create bean C, then create bean B (and inject bean C into it), then create bean A (and inject bean B into it).
+	But, when having a circular dependency, Spring cannot decide which of the beans should be created first, since they depend on one another. In these cases, Spring will raise a BeanCurrentlyInCreationException while loading context.
+	It can happen in Spring when using constructor injection; if you use other types of injections you should not find this problem since the dependencies will be injected when they are needed and not on the context loading.
+	
+	To resolve use 
+		Use @Lazy
+		Use Setter/Field Injection
+		Use @PostConstruct
+What is profiling ?
+
+	<profile>
+		<id>dev</id>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+		<properties>
+			<entityCode>IN</entityCode>
+			<entityVersion>1.0.0</entityVersion>
+			<updatePom>false</updatePom>
+			<spring.profiles.active>dev</spring.profiles.active>
+		</properties>
+	</profile>
+		
+	mvn clean package -P <profile-id>
+	mvn spring-boot:run -P <profile-id>

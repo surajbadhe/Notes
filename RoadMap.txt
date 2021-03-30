@@ -1,0 +1,46 @@
+Experience working with Agile, TDD, Lean and/or Continuous Delivery approaches and best practices,
+Core java
+Spring / Spring Boot
+SQL
+Hibernate 
+WebServices - Restful 
+Design patterns
+
+---------------------RestFul------------------
+
+--------------------Programs------------------
+Fibonacci Recursion 
+Get length of string without using function or loop?
+int length =0;
+while(!str.equals("")){
+str=str.substring(1);
+++length;
+}
+
+Get missing Number?
+	- Get sum
+		total=n*(n+1)/2;
+	- Subtract all the no from sum, you will get your no;
+	
+Reverse String
+Sum
+Find factorial 
+Count occurrences of each character in string 
+Palindrome 
+
+-------------------------Tell me about your self?-----------------
+Strength ?
+ 
+--Maven Build Process 
+	Validate , compile , test , package , integration test, verify install , deploy	
+
+--Logging
+
+--Unit Testing
+
+----------YouTube Interview Links----------
+Jp Morgan Interview Question 
+https://www.youtube.com/watch?v=WeXPUPrO50c
+
+CTS 
+https://www.youtube.com/watch?v=nmK9lFl6HXg

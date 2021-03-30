@@ -1,0 +1,113 @@
+4+ years Hands-on in development and delivery experience with Java
+Passion for software engineering and craftsman-like coding prowess
+Great OO skills, including strong design patterns knowledge
+Knowledge of best software best practices like Clean Code, Domain Driven Design, SOLID, DRY and
+more
+Good knowledge of Databases & RDMS. Hands-on knowledge on any of the NoSQL DBs like Mongo,
+ElasticSearch is a huge plus.
+Experience working with Agile, TDD, Lean and/or Continuous Delivery approaches and best practices,
+such as Extreme Programming (XP)
+Enthusiastic to work collaboratively with people and sharing your ideas to solve real business
+problems
+Eager on self-learning and sharing with the team
+
+The following skills are looked at favorably:
+Good knowledge of Spring Boot
+Knowledge of Spring DI
+Micro Services using Spring Cloud and Netflix OSS
+Knowledge in Docker and Kubernetes
+Knowledge of Infra-as-code and hands-on experience in any of Terraform, Ansible
+------------
+
+Requirement for Apisero
+From Interview Preparation Point Of View, brush up required on the following points
+Programming Basics and Computer Science Fundamentals
+Polymorphism, Synchronization, Cloud Computing, System Integration, Java, DBMS, Networking, Version Controls
+Projects previously worked upon Or Final Projects (In Case of Freshers)
+Communication Skills, Ability, and willingness to learn new skills and technologies
+Awareness of any System Integration tool is good to have. Preference is given to candidates having the following order: -
+MuleSoft
+TIBCO
+IBM IIB, Dell Boomi, Biztalk, Informatica, Oracle SOA, OSD
+standards for development,
+
+Core java 
+Http All methods , put vs patch - Done
+Cloud security 
+vertical and horizontal - Done
+what is one way ssl , two way ssl - Done
+Spring security role base - Done
+Deployment process and tools docker basic.
+palindrome -Done 
+rest Api microserice 
+successful apis 
+Asynchronous vs synchronous -Done
+micro-services vs monolithic - Done
+caching mechanism 
+string manipulation 
+  
+Related to Mulesoft, Mule 4 , Cloudhub  
+
+integration, cloud, ci/cd, current job etc. 
+--------------
+
+ 
+
+• Strong experience with good design principles 
+	patterns, cohesion/coupling, S.O.L.I.D.
+	Experience with Services Oriented Architecture and REST API, Angular JS, Java Script CSS & HTML
+• Experience with writing clean and maintainable code using engineering best practices 
+	(unit testing, TDD, continuous integration and deployment, automation, design patterns, refactoring etc.)
+• Strong experience working with other developers, quality engineers (QE), ops engineers and support engineers to ensure smooth deployment, continual operation and passion for developing good software.
+• Experience participating in design discussions with both technical and non-technical audiences.
+• Familiarity or experience with Agile engineering practices
+
+Great OO skills, including strong design patterns knowledge
+Knowledge of best software best practices like Clean Code, Domain Driven Design, SOLID, DRY and
+more
+Good knowledge of Databases & RDMS. Hands-on knowledge on any of the NoSQL DBs like Mongo,
+
+------------------------------------
+
+
+Job Description
+-Excellent understanding of development security and its implementation in systems: identification, authentication, access control and provisioning, alignment of jurisdiction to business process
+-Knowledge of single-sign-on security strategies (e.g. SAML, OAUTH2, SiteMinder etc.)
+-Excellent understanding of authentication related mechanisms (Kerberos, One Time Passwords, PKI)
+-Good understanding of cryptography and its practical uses within secure application development
+-Familiarity with common security vulnerabilities (e.g. OWASP Top 10)
+-Strong technical skills required to understand vulnerabilities in detail and how to resolve/mitigate them.
+-Excellent knowledge of programming best practices, design patterns, etc.
+-Excellent problem solving skills, being able to develop approaches to complex technology and strategy problems, building consensus across diverse interest groups and working within constraints of practical delivery yet able to think beyond the requirements of immediate issues.
+-Well-developed written communication skills with the ability to summarise key issues, conclusions and recommendations in report form. Target audiences will include regulatory authorities and internal/external auditors.
+-Highly skilled and able to demonstrate value to the development community at a practical level, working alongside developers, production staff and technical architects on a collaborative basis
+-The ability to manage independent responsibilities and projects while working closely with the security, architecture and development communities; the candidate must be well organized, self-motivating and a good communicator
+-A pragmatist with the strength of character to lead divergent interests to common ground and the best outcome
+-A technologist, with an interest in emergent technologies and practices, with the ability to understand and communicate how these could fit within the technology estate
+-Approachable and willing to share their expertise and experience in order to assist the development of teams and individuals
+
+------------------------------------
+
+1. Resource would be involved in architectural concepts for MuleSoft implementations including encryption, security, logging, throttling, scalability and clustering
+2. Designing, prototyping, and delivering APIs, integration and applications in varied deployment models (cloud-based, on-premise or hybrid) and agility to respond.
+3. Provide architecture, analysis, build, and testing for MuleSoft integrations.
+4. Provide technical delivery for MuleSoft and API Management integration projects.
+5. Understand and validate integration requirements
+6. Develop APIs on Mule Soft platform
+7. Develop Business Process Orchestrations - ESB Itinerary using Mule ESB
+8. Install, configure and deploy solution using Mule ESB
+9. Serving as an API and integration evangelist, acting as a trusted advisor in guiding all sizes towards the realization of the business outcome by leveraging the application of an API-led strategy using MuleSoft technology.
+10. Document design decisions and integrations resulting from new designs, system changes, or upgrades.
+11. Participate in SIT, end to end, and unit testing efforts in cooperation with overall Testing coordinator.
+12. Strong Mule Soft experience including Mule Soft ESB.
+
+-------------------------------------
+Bio 
+Current Company - Wipro Limited
+Current CTC -
+Expected CTC -
+Location - Pune
+Preferred Location- Pune
+PAN CARD NUMBER - BNAPB0758A
+Notice Period - 60 Days
+DOB - 29-jan-1990
